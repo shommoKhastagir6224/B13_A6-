@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Plan",
+    "description": "Basic features for beginners",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic editing", "Export to PDF"],
+    "icon": "../src/assets/products/writing_2327400 1.png"
+  },
+  {
+    "id": 2,
+    "name": "Basic Plan",
+    "description": "Essential tools for individuals",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["50+ templates", "ATS optimization", "Download as PDF"],
+    "icon": "../src/assets/products/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Standard Plan",
+    "description": "Perfect for growing professionals",
+    "price": 19,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": ["100+ templates", "Advanced editing", "Priority support"],
+    "icon": "../src/assets/products/shopping-cart.png"
+  },
+  {
+    "id": 4,
+    "name": "Pro Plan",
+    "description": "Advanced features for professionals",
+    "price": 29,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["200+ templates", "AI suggestions", "Unlimited downloads"],
+    "icon": "../src/assets/products/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Business Plan",
+    "description": "Best for teams and startups",
+    "price": 99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": ["Team access", "Shared workspace", "Analytics dashboard"],
+    "icon": "../src/assets/products/portfolio.png"
+  },
+  {
+    "id": 6,
+    "name": "Enterprise Plan",
+    "description": "Custom solutions for large companies",
+    "price": 199,
+    "period": "yearly",
+    "tag": "premium",
+    "tagType": "premium",
+    "features": ["Custom integrations", "Dedicated manager", "24/7 support"],
+    "icon": "../src/assets/products/social-media.png"
+  },
+  {
+    "id": 7,
+    "name": "Student Plan",
+    "description": "Affordable plan for students",
+    "price": 5,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["30+ templates", "Basic ATS support", "Export to PDF"],
+    "icon": "../src/assets/products/student.png"
+  },
+  {
+    "id": 8,
+    "name": "Freelancer Plan",
+    "description": "Ideal for freelancers",
+    "price": 15,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["80+ templates", "Client sharing", "Custom branding"],
+    "icon": "../src/assets/products/freelancer.png"
+  },
+  {
+    "id": 9,
+    "name": "Lifetime Plan",
+    "description": "One-time payment for lifetime access",
+    "price": 149,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": ["All templates", "Lifetime updates", "Premium support"],
+    "icon": "../src/assets/products/lifetime.png"
+  }
+]

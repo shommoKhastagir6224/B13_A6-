@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Products from "./Product";
+import Cart from "./cart";
 
-const Product_Tool = () => {
+const Product_Tool = ({ ProductPromise }) => {
+  const [products, setProducts] = useState([]);
   const [activeBtn, setActiveBtn] = useState("Product");
+  const [productData, setProductData] = useState([]);
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      const data = await ProductPromise; // এখানে promise resolve হবে
+      setProducts(data);
+    };
+    loadProducts();
+  }, [ProductPromise]);
 
   return (
     <div className="text-center my-30 mx-50">
@@ -17,7 +29,7 @@ const Product_Tool = () => {
           className={`btn ${
             activeBtn === "Product"
               ? "bg-linear-to-r from-blue-800 to-purple-700"
-              : "bg-gray-200 text-black "
+              : "bg-gray-200 text-black"
           } rounded-xl p-4 text-lg font-bold`}
         >
           Products
@@ -27,12 +39,22 @@ const Product_Tool = () => {
           className={`btn ${
             activeBtn === "Cart"
               ? "bg-linear-to-r from-blue-800 to-purple-700"
-              : "bg-gray-200  text-black "
+              : "bg-gray-200 text-black"
           } rounded-xl p-4 text-lg font-bold`}
         >
           Cart
         </button>
       </div>
+
+      {activeBtn === "Product" ? (
+        <Products
+          products={products}
+          SetProductData={setProductData}
+          productData={productData}
+        />
+      ) : (
+        <Cart SetProductData={setProductData} productData={productData} />
+      )}
     </div>
   );
 };

@@ -24,7 +24,7 @@ const Header = () => {
         </div>
 
         {/* Right side image */}
-        <div>
+        <div className="shadow-2xl">
           <img src={Banner} alt="Banner" className="w-100 h-auto" />
         </div>
       </div>
