@@ -3,10 +3,10 @@ import { FaUser } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 
 
-const SelectedCard = ({ product, handleDeleteSelectedPlayer }) => {
+const SelectedCard = ({ product, handleDeleteSelectedPlan }) => {
   return (
     <>
-      <div className="flex items-center gap-6 justify-between p-10 rounded-2xl border">
+      <div className="flex items-center gap-6 my-6 justify-between p-10 rounded-2xl border">
         <div className="flex items-center gap-6">
           <img
             src={product.icon}
@@ -21,13 +21,17 @@ const SelectedCard = ({ product, handleDeleteSelectedPlayer }) => {
         </div>
         <button
           className="text-3xl"
-          onClick={() => handleDeleteSelectedPlayer(product)}>
+          onClick={() => handleDeleteSelectedPlan(product)}>
           <MdDelete />
         </button>
       </div>
-      <button className="btn btn-success">Add More Players</button>
+
     </>
   );
 };
+//  <div className='mt-20'>
+//             
+
+//            </div>
 
 export default SelectedCard;

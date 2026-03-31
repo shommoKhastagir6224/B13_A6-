@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { Suspense } from 'react'
 import Banner from "./Componant/Banner";
 import Header from "./Componant/Header";
 import Product_Tool from "./Componant/Product_tool/Product_Tool";
@@ -15,11 +15,16 @@ function App() {
   const ProductPromise = fetchProduct();
 
   return (
-    
     <>
       <Banner />
       <Header />
-      <Product_Tool ProductPromise={ProductPromise} />
+
+      <Suspense
+        fallback={<span className="loading loading-dots loading-xl"></span>}
+      >
+        <Product_Tool ProductPromise={ProductPromise} />
+      </Suspense>
+
       <Process />
       <Offer />
       <Footer />

@@ -33,7 +33,7 @@ const Banner = () => {
       {/* Right side button */}
       <div className="flex gap-2 items-center">
         <a className="text-3xl">
-          <CiShoppingCart />
+          <CiShoppingCart /> 
          </a>
         <a className="btn btn-ghost bg-cyan-700 rounded-2xl">LogIn</a>
         <a className="btn rounded-4xl p-4 bg-linear-to-r from-blue-800 to-purple-700">Get Started</a>

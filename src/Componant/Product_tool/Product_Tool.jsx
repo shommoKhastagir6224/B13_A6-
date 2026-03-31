@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,  use } from "react";
 import Products from "./Product";
 import Cart from "./cart";
 
 const Product_Tool = ({ ProductPromise }) => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const [activeBtn, setActiveBtn] = useState("Product");
   const [productData, setProductData] = useState([]);
 
-  useEffect(() => {
-    const loadProducts = async () => {
-      const data = await ProductPromise;
-      setProducts(data);
-    };
-    loadProducts();
-  }, [ProductPromise]);
+  const products = use(ProductPromise)
+
+  const handleCheckout = () => {
+  setProductData([]); 
+};
+  
 
   return (
     <div className="text-center my-20 md:my-30 md:mx-50">
@@ -44,7 +43,7 @@ const Product_Tool = ({ ProductPromise }) => {
               : "bg-gray-200 text-black"
           } rounded-xl p-4 text-lg font-bold`}
         >
-          Cart
+          Cart ({productData.length})
         </button>
       </div>
 
@@ -56,9 +55,12 @@ const Product_Tool = ({ ProductPromise }) => {
         />
       ) : (
         <Cart
-          selectedPlans={productData}      // ✅ FIX
-          setSelectedPlans={setProductData} // ✅ FIX
+          
+          selectedPlans={productData}
+          setSelectedPlans={setProductData}
+          handleCheckout={handleCheckout}   
         />
+
       )}
     </div>
   );

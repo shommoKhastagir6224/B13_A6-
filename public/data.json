@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Starter Plan",
     "description": "Basic features for beginners",
-    "price": 0,
+    "price": 2,
     "period": "one-time",
     "tag": "new",
     "tagType": "new",
