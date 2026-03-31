@@ -3,6 +3,7 @@ import Banner from "./Componant/Banner";
 import Header from "./Componant/Header";
 import Product_Tool from "./Componant/Product_tool/Product_Tool";
 import Process from "./Componant/Process";
+import Offer from "./Componant/offer";
 import Footer from "./Componant/footer/Footer";
 
 const fetchProduct = async () => {
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Product_Tool ProductPromise={ProductPromise} />
       <Process />
+      <Offer />
       <Footer />
     </>
   );
