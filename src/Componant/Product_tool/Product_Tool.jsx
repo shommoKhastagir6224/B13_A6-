@@ -16,7 +16,7 @@ const Product_Tool = ({ ProductPromise }) => {
   }, [ProductPromise]);
 
   return (
-    <div className="text-center my-30 mx-50">
+    <div className="text-center my-20 md:my-30 md:mx-50">
       <h1 className="text-4xl">Premium Digital Tools</h1>
       <p className="py-4 text-lg">
         Choose from our curated collection of premium digital products designed

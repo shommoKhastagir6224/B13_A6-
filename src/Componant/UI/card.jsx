@@ -1,32 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 
-const Card = ({ product }) => {
-  const { name, description, price, period, features, tag,icon } = product;
+const Card = ({ product, productData, SetProductData }) => {
+  const { name, description, price, period, features, tag, icon } = product;
+
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleSelect = () => {
+    toast.success(`${name} is selected`);
+    setIsSelected(true);
+    SetProductData([...productData, product]);
+  };
 
   // 🎯 Dynamic Tag Color (Tailwind)
   const getTagStyle = () => {
-    if (tag === "best seller")
-      return "bg-yellow-200 text-yellow-800";
-    if (tag === "new")
-      return "bg-green-200 text-green-800";
-    if (tag === "popular")
-      return "bg-purple-200 text-purple-800";
+    if (tag === "best seller") return "bg-yellow-200 text-yellow-800";
+    if (tag === "new") return "bg-green-200 text-green-800";
+    if (tag === "popular") return "bg-purple-200 text-purple-800";
     return "bg-gray-200 text-gray-800";
   };
 
   return (
     <div className="card bg-base-100 shadow-xl p-6 relative text-left rounded-2xl">
-      
       {/* Tag */}
       <div
-        className={`absolute top-4 right-4 px-3 py-1 text-xs font-semibold rounded-full ${getTagStyle()}`}
+        className={`absolute top-4 right-4 px-3 py-2 text-xs font-semibold rounded-full  ${getTagStyle()}`}
       >
         {tag}
       </div>
 
       {/* Icon */}
-      <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-xl mb-4">
-        <img src={icon} alt={name} className="w-full h-full object-contain" />
+      <div className="w-12 h-12 rounded-full text-white flex items-center justify-center text-xl mb-4">
+        <img src={icon} alt={name} className="object-contain" />
       </div>
 
       {/* Title */}
@@ -53,8 +58,12 @@ const Card = ({ product }) => {
       </ul>
 
       {/* Button */}
-      <button className="btn w-full rounded-full bg-linear-to-r from-indigo-600 to-purple-600 text-white border-none">
-        Buy Now
+      <button
+        className="btn w-full rounded-full bg-linear-to-r from-indigo-600 to-purple-600 text-white border-none"
+        onClick={handleSelect}
+        disabled={isSelected}
+      >
+        {isSelected ? "Selected" : "Buy Now "}
       </button>
     </div>
   );

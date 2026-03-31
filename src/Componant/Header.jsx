@@ -29,7 +29,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-    <div className=" flex justify-evenly items-center px-50 py-15 bg-linear-to-r from-blue-800 to-purple-700">
+    <div className=" flex justify-evenly items-center md:px-50 py-15 bg-linear-to-r from-blue-800 to-purple-700">
       <div> <h1 className="text-3xl">50K+</h1> <p className="text-gray-400 text-lg">Active Users</p></div>
       <div className="h-15 w-1 bg-gray-500"></div>
       <div> <h1 className="text-3xl">200+</h1> <p className="text-gray-400 text-lg">Premium Tools</p></div>

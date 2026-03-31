@@ -74,7 +74,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["30+ templates", "Basic ATS support", "Export to PDF"],
-    "icon": "../src/assets/products/student.png"
+    "icon": "../src/assets/products/operation.png"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["80+ templates", "Client sharing", "Custom branding"],
-    "icon": "../src/assets/products/freelancer.png"
+    "icon": "../src/assets/products/portfolio.png"
   },
   {
     "id": 9,
@@ -96,6 +96,6 @@
     "tag": "best seller",
     "tagType": "best-seller",
     "features": ["All templates", "Lifetime updates", "Premium support"],
-    "icon": "../src/assets/products/lifetime.png"
+    "icon": "../src/assets/products/writing_2327400 1.png"
   }
 ]
