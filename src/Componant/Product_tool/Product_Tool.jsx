@@ -9,7 +9,7 @@ const Product_Tool = ({ ProductPromise }) => {
 
   useEffect(() => {
     const loadProducts = async () => {
-      const data = await ProductPromise; // এখানে promise resolve হবে
+      const data = await ProductPromise;
       setProducts(data);
     };
     loadProducts();
@@ -23,6 +23,7 @@ const Product_Tool = ({ ProductPromise }) => {
         to <br />
         boost your productivity and creativity.
       </p>
+
       <div className="flex justify-center items-center gap-2">
         <button
           onClick={() => setActiveBtn("Product")}
@@ -34,6 +35,7 @@ const Product_Tool = ({ ProductPromise }) => {
         >
           Products
         </button>
+
         <button
           onClick={() => setActiveBtn("Cart")}
           className={`btn ${
@@ -53,7 +55,10 @@ const Product_Tool = ({ ProductPromise }) => {
           productData={productData}
         />
       ) : (
-        <Cart SetProductData={setProductData} productData={productData} />
+        <Cart
+          selectedPlans={productData}      // ✅ FIX
+          setSelectedPlans={setProductData} // ✅ FIX
+        />
       )}
     </div>
   );
