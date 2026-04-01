@@ -1,18 +1,18 @@
-import React, { useState,  use } from "react";
+import React, { useState, use } from "react";
 import Products from "./Product";
 import Cart from "./cart";
+// import { toast } from "react-toastify";
 
 const Product_Tool = ({ ProductPromise }) => {
-  // const [products, setProducts] = useState([]);
   const [activeBtn, setActiveBtn] = useState("Product");
   const [productData, setProductData] = useState([]);
 
-  const products = use(ProductPromise)
+
+  const products = use(ProductPromise);
 
   const handleCheckout = () => {
-  setProductData([]); 
-};
-  
+    setProductData([]);
+  };
 
   return (
     <div className="text-center my-20 md:my-30 md:mx-50">
@@ -23,7 +23,9 @@ const Product_Tool = ({ ProductPromise }) => {
         boost your productivity and creativity.
       </p>
 
-      <div className="flex justify-center items-center gap-2">
+      <div
+        className="flex justify-center items-center gap-2 "
+      >
         <button
           onClick={() => setActiveBtn("Product")}
           className={`btn ${
@@ -55,12 +57,10 @@ const Product_Tool = ({ ProductPromise }) => {
         />
       ) : (
         <Cart
-          
           selectedPlans={productData}
           setSelectedPlans={setProductData}
-          handleCheckout={handleCheckout}   
+          handleCheckout={handleCheckout}
         />
-
       )}
     </div>
   );

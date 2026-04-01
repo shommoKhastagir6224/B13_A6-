@@ -39,12 +39,12 @@ const cart = ({ selectedPlans, setSelectedPlans, handleCheckout }) => {
                   handleDeleteSelectedPlan={handleDeleteSelectedPlan}
                 />
               ))}
-              <div className="flex justify-between mx-10 my-5 text-xl">
-                <h2>total</h2>
+              <div className="flex justify-between mx-8 my-5 text-xl">
+                <h2 className="text-3xl">total</h2>
                 <p>$ {selectedPlans.reduce((sum, plan) => sum + plan.price, 0).toFixed(2)}</p>
               </div>
               <button 
-                className="btn btn-success mt-6 w-full rounded-4xl"
+                className="btn btn-success mt-6 text-xl w-full rounded-4xl"
                 onClick={handleCheckout}
               >
                 Proceed to Checkout

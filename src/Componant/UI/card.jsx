@@ -1,6 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 
+
 const Card = ({ product, productData, SetProductData }) => {
   const { name, description, price, period, features, tag, icon } = product;
 

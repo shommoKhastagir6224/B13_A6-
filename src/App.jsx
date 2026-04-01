@@ -4,7 +4,9 @@ import Header from "./Componant/Header";
 import Product_Tool from "./Componant/Product_tool/Product_Tool";
 import Process from "./Componant/Process";
 import Offer from "./Componant/offer";
+import { ToastContainer } from "react-toastify";
 import Footer from "./Componant/footer/Footer";
+
 
 const fetchProduct = async () => {
   const res = await fetch("./data.json");
@@ -24,7 +26,7 @@ function App() {
       >
         <Product_Tool ProductPromise={ProductPromise} />
       </Suspense>
-
+      <ToastContainer />
       <Process />
       <Offer />
       <Footer />
