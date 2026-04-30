@@ -3,36 +3,37 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-base-200">
-      <footer className=" flex justify-evenly footer sm:footer-horizontal text-base-content  pt-30 pb-18 md:px-50">
-        <aside>
+      <footer className=" md:flex justify-evenly footer  text-base-content  pt-30 pb-18 lg:px-50 ">
+        <aside className=" m-0 m-auto md:text-left">
           <p className="text-4xl pb-5">DigiTools</p>
           <p className="text-sm text-gray-400">
             Premium digital tools for creators,<br /> professionals, and businesses.
             Work smarter <br /> with our suite of powerful tools.
           </p>
         </aside>
-        <nav>
-          <h6 className="footer-title text-xl">Product</h6>
+        <div className="flex md:gap-4 lg:gap-10 md:pr-10">
+          <nav className = "flex flex-col gap-2">
+          <h6 className="footer-title text-md md:text-xl">Product</h6>
           <a className="link link-hover">Features</a>
           <a className="link link-hover">Price</a>
           <a className="link link-hover">Templates</a>
           <a className="link link-hover">Integrations</a>
         </nav>
-        <nav>
-          <h6 className="footer-title text-xl ">Company</h6>
+        <nav className = "flex flex-col gap-2">
+          <h6 className="footer-title text-md md:text-xl">Company</h6>
           <a className="link link-hover">About</a>
           <a className="link link-hover">Blog</a>
           <a className="link link-hover">Careers</a>
           <a className="link link-hover">Press</a>
         </nav>
-        <nav>
-          <h6 className="footer-title text-xl">Resources</h6>
+        <nav className = "flex flex-col gap-2">
+          <h6 className="footer-title text-md md:text-xl">Resources</h6>
           <a className="link link-hover">Documentation</a>
           <a className="link link-hover">Help Center</a>
           <a className="link link-hover">Community</a>
           <a className="link link-hover">Contact</a>
         </nav>
-        <nav>
+        <nav className = "flex flex-col gap-2">
           <h6 className="footer-title text-xl">Social Links</h6>
           <div className="grid grid-flow-col gap-4">
             <a>
@@ -70,15 +71,16 @@ const Footer = () => {
             </a>
           </div>
         </nav>
+        </div>
       </footer>
-        <hr className="text-gray-500 w-280 mx-50 "/>
+        <hr className="text-gray-500  lg:mx-50 sm:m-0"/>
 
-      <div className="flex justify-between mx-50 text-lg py-8 text-gray-400">
+      <div className="flex justify-between mx-10 lg:mx-50 md:text-lg py-8 text-gray-400">
         <div>
             <p>© {new Date().getFullYear()} Digitools. All rights reserved.</p>
         </div>
         <div>
-            <nav className="flex gap-5">
+            <nav className="flex md:gap-5">
                 <a className="link link-hover">Privacy Policy</a>
                 <a className="link link-hover">Terms of Service</a>
                 <a className="link link-hover">Cookie Policy</a>
